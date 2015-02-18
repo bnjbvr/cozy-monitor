@@ -554,8 +554,8 @@ program
     .command("*")
     .description("Display the error message for an unknown command.")
     .action ->
-        log.error 'Unknown command, run "cozy-monitor --help"' + \
-                    ' to know the list of available commands.'
+        log.error 'Unknown command, showing help instead.'
+        program.outputHelp()
 
 program.parse process.argv
 
